@@ -47,16 +47,16 @@ jobs:
 
       # ---------------- K8S CD ----------------
 
-      - name: Setup kubectl
-        uses: azure/setup-kubectl@v4
+#      - name: Setup kubectl
+#        uses: azure/setup-kubectl@v4
 
-      - name: Setup Helm
-        uses: azure/setup-helm@v4
+#      - name: Setup Helm
+#        uses: azure/setup-helm@v4
 
-      - name: Configure kubeconfig
-        run: |
-          mkdir -p $HOME/.kube
-          echo "${{ secrets.KUBECONFIG_B64 }}" | base64 -d > $HOME/.kube/config
+#      - name: Configure kubeconfig
+#        run: |
+#          mkdir -p $HOME/.kube
+#          echo "${{ secrets.KUBECONFIG_B64 }}" | base64 -d > $HOME/.kube/config
       
 
       - name: Deploy with Helm
