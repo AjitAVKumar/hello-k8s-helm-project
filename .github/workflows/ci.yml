@@ -57,10 +57,8 @@ jobs:
 #        run: |
 #          mkdir -p $HOME/.kube
 #          echo "${{ secrets.KUBECONFIG_B64 }}" | base64 -d > $HOME/.kube/config
-      
+
 
       - name: Deploy with Helm
-        run: |
-          helm upgrade --install hello-release ./hello-chart \
-          --set image.repository=${{ secrets.DOCKER_USERNAME }}/hello-k8s \
-          --set image.tag=${{ github.run_number }}
+        run: helm upgrade --install hello-release ./hello-chart --set image.repository=${{ secrets.DOCKERHUB_USERNAME }}/hello-k8s --set image.tag=${{ github.run_number }}
+
