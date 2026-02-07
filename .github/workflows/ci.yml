@@ -22,7 +22,7 @@ jobs:
           java-version: 17
 
       - name: Build JAR
-        run: mvn clean package -DskipTests
+        run: ./mvnw.cmd clean package -DskipTests
 
       # ---------------- DOCKER BUILD ----------------
 
