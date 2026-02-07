@@ -13,7 +13,7 @@ public class TodoController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello from Docker + Kubernetes project- v2";
+        return "Hello from Docker + Kubernetes project- successfully deployed!";
     }
 
     @GetMapping("/health")
